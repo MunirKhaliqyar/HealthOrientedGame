@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bylxgqlqthy13"]
+
+[ext_resource type="Script" path="res://grenade.gd" id="1_swnqg"]
+[ext_resource type="Texture2D" uid="uid://bnsoa6i2eb4ag" path="res://TopDownShooter/TopDownShooter/projectiles/grenade.png" id="1_y4u8j"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7ah5d"]
+bounce = 100.0
+
+[node name="grenade" type="RigidBody2D"]
+position = Vector2(-1, 0)
+collision_layer = 4
+collision_mask = 10
+physics_material_override = SubResource("PhysicsMaterial_7ah5d")
+gravity_scale = 0.0
+linear_damp = 1.0
+script = ExtResource("1_swnqg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_y4u8j")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(48, -54, 3, -74, -52, -54, -75, -1, -54, 56, -1, 75, 55, 56, 76, 4)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

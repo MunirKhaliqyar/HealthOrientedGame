@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://5i75dylwkxfp"]
+
+[ext_resource type="Script" path="res://target2.gd" id="1_rb4lq"]
+[ext_resource type="Texture2D" uid="uid://d04rm350ruavp" path="res://TopDownShooter/TopDownShooter/crosshair159.png" id="2_rw5hl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bdr8a"]
+radius = 24.1868
+
+[node name="target2" type="Area2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_rb4lq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bdr8a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_rw5hl")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

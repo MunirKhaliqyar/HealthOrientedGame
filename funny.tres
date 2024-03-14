@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cffeqcknwvps6"]
+
+[ext_resource type="FontFile" uid="uid://drkiioknkoms1" path="res://TopDownShooter/TopDownShooter/ui/subatomic.tsoonami.ttf" id="1_tcpg4"]
+
+[resource]
+default_base_scale = 5.0
+default_font = ExtResource("1_tcpg4")
+default_font_size = 50

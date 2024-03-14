@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0pa5lx5wffx3"]
+
+[ext_resource type="Script" path="res://Scout.gd" id="1_5ep8c"]
+[ext_resource type="Texture2D" uid="uid://dc21g5fwoemmu" path="res://TopDownShooter/TopDownShooter/player/player.png" id="2_idsfl"]
+
+[node name="Scout" type="CharacterBody2D"]
+collision_mask = 11
+script = ExtResource("1_5ep8c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_idsfl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = 1.5708
+polygon = PackedVector2Array(22, -23, 69, -125, -27, -51, -55, 68, 44, 104, 69, -115)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -1)
+zoom = Vector2(0.19, 0.19)
+limit_left = -7500
+limit_top = -7500
+limit_right = 7500
+limit_bottom = 7500
+
+[node name="guntip" type="Node2D" parent="."]
+position = Vector2(84, 18)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

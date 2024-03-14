@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://dujtcgltap0p5"]
+
+[ext_resource type="Texture2D" uid="uid://cxmsi3ymjdqsh" path="res://Sprites/Forest/ForestBgLightGreen_4.png" id="1_iotfh"]
+[ext_resource type="Texture2D" uid="uid://r0aw21vmo2fi" path="res://Sprites/Forest/ForestBgLightGreen_3.png" id="2_y0mc0"]
+[ext_resource type="Texture2D" uid="uid://dfbl436shrhot" path="res://Sprites/Forest/ForestBgLightGreen_2.png" id="3_mj3ex"]
+[ext_resource type="Texture2D" uid="uid://cckgl1lial1gu" path="res://Sprites/Forest/ForestBgLightGreen_1.png" id="4_pk4xv"]
+[ext_resource type="PackedScene" uid="uid://dbgg7efw7yj1p" path="res://TestScenes/tree.tscn" id="5_7tlhr"]
+[ext_resource type="PackedScene" uid="uid://bsytn6nibikxl" path="res://TestScenes/platform.tscn" id="6_u3723"]
+[ext_resource type="PackedScene" uid="uid://brrsffc2ay2o4" path="res://TestScenes/icon.tscn" id="7_w085g"]
+
+[node name="ForestWorld" type="Node2D"]
+
+[node name="Forest4" type="Sprite2D" parent="."]
+position = Vector2(572, 323)
+texture = ExtResource("1_iotfh")
+
+[node name="Forest3" type="Sprite2D" parent="."]
+position = Vector2(572, 323)
+texture = ExtResource("2_y0mc0")
+
+[node name="Forest2" type="Sprite2D" parent="."]
+position = Vector2(572, 323)
+texture = ExtResource("3_mj3ex")
+
+[node name="Forest1" type="Sprite2D" parent="."]
+position = Vector2(572, 323)
+texture = ExtResource("4_pk4xv")
+
+[node name="Trees" type="Node2D" parent="."]
+
+[node name="Tree" parent="Trees" instance=ExtResource("5_7tlhr")]
+position = Vector2(59, 332)
+
+[node name="Tree2" parent="Trees" instance=ExtResource("5_7tlhr")]
+position = Vector2(725, 385)
+
+[node name="Tree3" parent="Trees" instance=ExtResource("5_7tlhr")]
+position = Vector2(369, 490)
+scale = Vector2(1.87522, 1.47604)
+
+[node name="Platform" parent="." instance=ExtResource("6_u3723")]
+position = Vector2(344, 634)
+
+[node name="Platform2" parent="." instance=ExtResource("6_u3723")]
+position = Vector2(720, 508)
+scale = Vector2(1.72, 1)
+
+[node name="Platform3" parent="." instance=ExtResource("6_u3723")]
+position = Vector2(64, 452)
+
+[node name="Sprite2D" parent="." instance=ExtResource("7_w085g")]
+position = Vector2(473, 202)
+
+[node name="Tree4" parent="." instance=ExtResource("5_7tlhr")]
+position = Vector2(1025, 284)
+scale = Vector2(2.73, 2.149)

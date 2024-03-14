@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=3 uid="uid://clyjdnj7akcq3"]
+
+[ext_resource type="Texture2D" uid="uid://lf8ik1b5m6ha" path="res://TopDownShooter/TopDownShooter/ground/dirt.png" id="1_7witr"]
+[ext_resource type="Script" path="res://target_practice.gd" id="1_jhj2d"]
+[ext_resource type="PackedScene" uid="uid://d0pa5lx5wffx3" path="res://scout.tscn" id="2_0gmdp"]
+[ext_resource type="PackedScene" uid="uid://4rp1mdomghof" path="res://target.tscn" id="3_tspo0"]
+[ext_resource type="PackedScene" uid="uid://5i75dylwkxfp" path="res://target_2.tscn" id="4_6ipr0"]
+[ext_resource type="PackedScene" uid="uid://de2b04ebp18q6" path="res://box.tscn" id="5_b3sbf"]
+[ext_resource type="PackedScene" uid="uid://dg5s1ct70u6pa" path="res://ui.tscn" id="7_jloue"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_busqm"]
+size = Vector2(14974, 298)
+
+[node name="TargetPractice" type="Node2D"]
+script = ExtResource("1_jhj2d")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(4179, -1432)
+scale = Vector2(0.425, 0.425)
+
+[node name="Soil" type="Sprite2D" parent="."]
+texture_repeat = 3
+scale = Vector2(10, 10)
+texture = ExtResource("1_7witr")
+region_enabled = true
+region_rect = Rect2(0, 0, 1500, 1500)
+
+[node name="targets" type="Node2D" parent="."]
+
+[node name="target" parent="targets" instance=ExtResource("3_tspo0")]
+position = Vector2(263, -1916)
+
+[node name="target2" parent="targets" instance=ExtResource("3_tspo0")]
+position = Vector2(4509, 1932)
+
+[node name="target3" parent="targets" instance=ExtResource("3_tspo0")]
+position = Vector2(-3814, 1797)
+
+[node name="target4" parent="targets" instance=ExtResource("3_tspo0")]
+position = Vector2(-3043, -1432)
+
+[node name="target5" parent="targets" instance=ExtResource("3_tspo0")]
+position = Vector2(4179, -1432)
+
+[node name="target6" parent="targets" instance=ExtResource("4_6ipr0")]
+position = Vector2(305, 2356)
+
+[node name="box" parent="targets" instance=ExtResource("5_b3sbf")]
+position = Vector2(1158, -67)
+
+[node name="Scout" parent="." instance=ExtResource("2_0gmdp")]
+position = Vector2(0, -101)
+player_speed = null
+
+[node name="Edges" type="Node2D" parent="."]
+
+[node name="Top" type="StaticBody2D" parent="Edges"]
+position = Vector2(-32, -7680)
+
+[node name="top" type="CollisionShape2D" parent="Edges/Top"]
+position = Vector2(2, 139)
+shape = SubResource("RectangleShape2D_busqm")
+
+[node name="Top2" type="StaticBody2D" parent="Edges"]
+position = Vector2(-32, 7157)
+
+[node name="top" type="CollisionShape2D" parent="Edges/Top2"]
+position = Vector2(2, 139)
+shape = SubResource("RectangleShape2D_busqm")
+
+[node name="Top3" type="StaticBody2D" parent="Edges"]
+position = Vector2(-7491, -100)
+
+[node name="top" type="CollisionShape2D" parent="Edges/Top3"]
+position = Vector2(2, 139)
+rotation = 1.5743
+shape = SubResource("RectangleShape2D_busqm")
+
+[node name="Top4" type="StaticBody2D" parent="Edges"]
+position = Vector2(7386, -141)
+rotation = 1.56476
+
+[node name="top" type="CollisionShape2D" parent="Edges/Top4"]
+position = Vector2(2, 139)
+shape = SubResource("RectangleShape2D_busqm")
+
+[node name="Projectiles" type="Node2D" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("7_jloue")]
+
+[connection signal="spawn_new_target" from="targets/target6" to="." method="_on_target_6_spawn_new_target"]
+[connection signal="grenade_shot_from_player" from="Scout" to="." method="_on_scout_grenade_shot_from_player"]
+[connection signal="laser_shot_from_player" from="Scout" to="." method="_on_scout_laser_shot_from_player"]

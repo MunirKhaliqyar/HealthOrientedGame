@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://de2b04ebp18q6"]
+
+[ext_resource type="Texture2D" uid="uid://m8gc11by5cb" path="res://TopDownShooter/TopDownShooter/objects/box/lid.png" id="1_kel74"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26yw5"]
+size = Vector2(355, 163)
+
+[node name="box" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kel74")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_26yw5")
