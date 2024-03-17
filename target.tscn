@@ -11,9 +11,11 @@ script = ExtResource("1_u71k6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-10, 30)
+scale = Vector2(5, 5)
 texture = ExtResource("1_s4w8f")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(3, 3)
 polygon = PackedVector2Array(-40, -22, -232, -299, -312, -189, -373, -68, -403, 94, -347, 179, -292, 260, -211, 300, -136, 396, 25, 406, 232, 330, 348, 230, 348, 68, 328, -73, 212, -259, 5, -340, -242, -335, -221, -289)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
