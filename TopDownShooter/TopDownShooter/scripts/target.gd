@@ -1,14 +1,14 @@
 extends Area2D
 
 var sprites = [
-	"res://Sprites/NoBG/1.png",
-	"res://Sprites/NoBG/2.png",
-	"res://Sprites/NoBG/3.png",
-	"res://Sprites/NoBG/4.png",
-	"res://Sprites/NoBG/5.png",
-	"res://Sprites/NoBG/6.png",
-	"res://Sprites/NoBG/7.png",
-	"res://Sprites/NoBG/8.png"
+	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/1.png",
+	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/2.png",
+	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/3.png",
+	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/4.png",
+	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/5.png",
+	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/6.png",
+	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/7.png",
+	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/8.png"
 ]
 
 # Assuming you have a Timer node as a child of your node
@@ -50,15 +50,15 @@ func _on_area_entered(area):
 		Globals.target_destroyed += 1
 	if area.collision_layer ==2:
 		var bounce_direction = -velocity.normalized()
-		var bounce_distance = bounce_strength
-		var bounce_duration = 0.2  # Adjust as necessary
+		var bounce_distance = bounce_strength + 100
+		var bounce_duration = 0.8  # Adjust as necessary
 		var tween = get_tree().create_tween().bind_node(self)
 		tween.tween_property(self, "global_position", global_position + bounce_direction * bounce_distance, bounce_duration)
 
 
 func _on_body_entered(body):
 	if body.collision_layer == 1:
-		Globals.health -= 25
+		Globals.health -= 10
 		var bounce_direction = -velocity.normalized()
 		var bounce_distance = bounce_strength
 		var bounce_duration = 0.2  # Adjust as necessary

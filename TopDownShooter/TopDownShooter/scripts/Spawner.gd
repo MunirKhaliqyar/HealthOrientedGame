@@ -4,7 +4,7 @@ extends StaticBody2D
 # Variable to hold the CollisionShape2D
 
 # Load the enemy scene
-var enemy_scene = preload("res://Scenes/target.tscn")
+var enemy_scene = preload("res://TopDownShooter/TopDownShooter/Scenes/target.tscn")
 
 # Create a timer
 var timer = Timer.new()

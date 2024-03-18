@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://4rp1mdomghof"]
 
 [ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/target.gd" id="1_3dldu"]
-[ext_resource type="Texture2D" uid="uid://dktjmym7pagfc" path="res://Sprites/NoBG/4.png" id="2_i65lt"]
+[ext_resource type="Texture2D" uid="uid://dktjmym7pagfc" path="res://TopDownShooter/TopDownShooter/Sprites/NoBG/4.png" id="2_i65lt"]
 
 [node name="target" type="Area2D" groups=["enemies"]]
 scale = Vector2(0.425, 0.425)

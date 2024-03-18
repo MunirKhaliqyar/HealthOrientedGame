@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ta1ecr6c3jco"
-path="res://.godot/imported/3.png-a510cd288566b515e30ce6f88ea8503d.ctex"
+uid="uid://il8ek7v1weu3"
+path="res://.godot/imported/8.png-11fddca2776917d4b1fc741386a3a502.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/NoBG/3.png"
-dest_files=["res://.godot/imported/3.png-a510cd288566b515e30ce6f88ea8503d.ctex"]
+source_file="res://TopDownShooter/TopDownShooter/Sprites/NoBG/8.png"
+dest_files=["res://.godot/imported/8.png-11fddca2776917d4b1fc741386a3a502.ctex"]
 
 [params]
 

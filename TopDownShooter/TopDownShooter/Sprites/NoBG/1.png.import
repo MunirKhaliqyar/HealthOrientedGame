@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkw6g6ri46f1t"
-path="res://.godot/imported/1.png-c941427f7fe5d071e6de2fb221eadfbb.ctex"
+path="res://.godot/imported/1.png-20f0377784e40f36de1d57a5459b7150.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/NoBG/1.png"
-dest_files=["res://.godot/imported/1.png-c941427f7fe5d071e6de2fb221eadfbb.ctex"]
+source_file="res://TopDownShooter/TopDownShooter/Sprites/NoBG/1.png"
+dest_files=["res://.godot/imported/1.png-20f0377784e40f36de1d57a5459b7150.ctex"]
 
 [params]
 

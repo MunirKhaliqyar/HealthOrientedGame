@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://lf8ik1b5m6ha" path="res://TopDownShooter/TopDownShooter/ground/dirt.png" id="1_7witr"]
 [ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/target_practice.gd" id="1_jhj2d"]
-[ext_resource type="PackedScene" uid="uid://d0pa5lx5wffx3" path="res://Scenes/scout.tscn" id="2_0gmdp"]
+[ext_resource type="PackedScene" uid="uid://d0pa5lx5wffx3" path="res://TopDownShooter/TopDownShooter/Scenes/scout.tscn" id="2_0gmdp"]
 [ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/Spawner.gd" id="7_48ehd"]
-[ext_resource type="PackedScene" uid="uid://dg5s1ct70u6pa" path="res://Scenes/ui.tscn" id="7_jloue"]
+[ext_resource type="PackedScene" uid="uid://dg5s1ct70u6pa" path="res://TopDownShooter/TopDownShooter/Scenes/ui.tscn" id="7_jloue"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_busqm"]
 size = Vector2(14974, 96)
@@ -29,8 +29,6 @@ scale = Vector2(10, 10)
 texture = ExtResource("1_7witr")
 region_enabled = true
 region_rect = Rect2(0, 0, 1500, 1500)
-
-[node name="targets" type="Node2D" parent="."]
 
 [node name="Scout" parent="." groups=["Scout"] instance=ExtResource("2_0gmdp")]
 position = Vector2(0, -101)

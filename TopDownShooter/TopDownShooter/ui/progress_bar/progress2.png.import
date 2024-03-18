@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dktjmym7pagfc"
-path="res://.godot/imported/4.png-215a9e36a22c873fe18a946a3fa91b70.ctex"
+uid="uid://m4uqkj2n1u5c"
+path="res://.godot/imported/progress2.png-850c09138afd5332535fed908030bf86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/NoBG/4.png"
-dest_files=["res://.godot/imported/4.png-215a9e36a22c873fe18a946a3fa91b70.ctex"]
+source_file="res://TopDownShooter/TopDownShooter/ui/progress_bar/progress2.png"
+dest_files=["res://.godot/imported/progress2.png-850c09138afd5332535fed908030bf86.ctex"]
 
 [params]
 

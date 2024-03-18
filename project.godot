@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="TopDownShooter"
-run/main_scene="res://Scenes/target_practice.tscn"
+run/main_scene="res://TopDownShooter/TopDownShooter/Scenes/target_practice.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
 [autoload]
