@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bylxgqlqthy13"]
 
-[ext_resource type="Script" path="res://grenade.gd" id="1_swnqg"]
+[ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/grenade.gd" id="1_swnqg"]
 [ext_resource type="Texture2D" uid="uid://bnsoa6i2eb4ag" path="res://TopDownShooter/TopDownShooter/projectiles/grenade.png" id="1_y4u8j"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7ah5d"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://dg5s1ct70u6pa"]
 
-[ext_resource type="Texture2D" uid="uid://damq21vryl1ui" path="res://target.png" id="1_4g2qi"]
-[ext_resource type="Script" path="res://ui.gd" id="1_pirs2"]
+[ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/ui.gd" id="1_pirs2"]
 [ext_resource type="Theme" uid="uid://cffeqcknwvps6" path="res://funny.tres" id="2_5ga7r"]
+[ext_resource type="Texture2D" uid="uid://damq21vryl1ui" path="res://Sprites/target.png" id="3_3wc68"]
 [ext_resource type="Texture2D" uid="uid://di3s4kdtkdtdw" path="res://TopDownShooter/TopDownShooter/ui/progress_bar/bg.png" id="4_arwnm"]
 [ext_resource type="Texture2D" uid="uid://gcpmqj35x8t6" path="res://TopDownShooter/TopDownShooter/ui/grenade.png" id="4_tui8n"]
 [ext_resource type="Texture2D" uid="uid://cxb14vqgeqdbj" path="res://TopDownShooter/TopDownShooter/ui/progress_bar/over.png" id="5_l0367"]
@@ -40,7 +40,7 @@ alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="TargetCounter/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_4g2qi")
+texture = ExtResource("3_3wc68")
 expand_mode = 3
 
 [node name="Label" type="Label" parent="TargetCounter/HBoxContainer"]

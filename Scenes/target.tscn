@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://4rp1mdomghof"]
+
+[ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/target.gd" id="1_3dldu"]
+[ext_resource type="Texture2D" uid="uid://dktjmym7pagfc" path="res://Sprites/NoBG/4.png" id="2_i65lt"]
+
+[node name="target" type="Area2D" groups=["enemies"]]
+scale = Vector2(0.425, 0.425)
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_3dldu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-10, 30)
+scale = Vector2(5, 5)
+texture = ExtResource("2_i65lt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-4.25626, 79.1061)
+scale = Vector2(3.86728, 4.37688)
+polygon = PackedVector2Array(88.9412, -146.353, -90.3529, -150.118, -85.1765, 139.765, 107.765, 162.353)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

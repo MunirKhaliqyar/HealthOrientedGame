@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="TopDownShooter"
-run/main_scene="res://target_practice.tscn"
+run/main_scene="res://Scenes/target_practice.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
 
 [autoload]
 
@@ -63,3 +62,4 @@ pauseMenu={
 2d_physics/layer_2="enemies"
 2d_physics/layer_3="projectiles"
 2d_physics/layer_4="obstacles"
+2d_physics/layer_5="borders"

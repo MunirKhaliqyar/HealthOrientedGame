@@ -7,6 +7,9 @@ var can_grenade: bool = false
 signal laser_shot_from_player
 
 signal grenade_shot_from_player
+
+
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 #var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _process(_delta):
@@ -54,14 +57,6 @@ func _physics_process(_delta):
 	var direction: Vector2 = Input.get_vector("left","right","up","down")
 	velocity = direction * player_speed
 	
-
-	# Handle Jump.
-	
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-
-
 	move_and_slide()
 
 
@@ -72,3 +67,8 @@ func _on_timer_timeout():
 
 func _on_timer_2_timeout():
 	can_grenade = false # Replace with function body.
+
+
+func _on_area_2d_area_entered(area):
+	
+	pass # Replace with function body.

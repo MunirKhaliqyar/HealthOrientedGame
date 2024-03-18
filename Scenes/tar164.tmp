@@ -1,21 +1,23 @@
 [gd_scene load_steps=3 format=3 uid="uid://4rp1mdomghof"]
 
-[ext_resource type="Texture2D" uid="uid://damq21vryl1ui" path="res://target.png" id="1_s4w8f"]
-[ext_resource type="Script" path="res://target.gd" id="1_u71k6"]
+[ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/target.gd" id="1_3dldu"]
+[ext_resource type="Texture2D" uid="uid://damq21vryl1ui" path="res://Sprites/target.png" id="2_4bnuf"]
 
-[node name="target" type="Area2D"]
+[node name="target" type="Area2D" groups=["enemies"]]
 scale = Vector2(0.425, 0.425)
 collision_layer = 2
-collision_mask = 4
-script = ExtResource("1_u71k6")
+collision_mask = 5
+script = ExtResource("1_3dldu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-10, 30)
 scale = Vector2(5, 5)
-texture = ExtResource("1_s4w8f")
+texture = ExtResource("2_4bnuf")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 scale = Vector2(3, 3)
 polygon = PackedVector2Array(-40, -22, -232, -299, -312, -189, -373, -68, -403, 94, -347, 179, -292, 260, -211, 300, -136, 396, 25, 406, 232, 330, 348, 230, 348, 68, 328, -73, 212, -259, 5, -340, -242, -335, -221, -289)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

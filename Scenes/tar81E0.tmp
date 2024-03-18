@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://clyjdnj7akcq3"]
+
+[ext_resource type="Texture2D" uid="uid://lf8ik1b5m6ha" path="res://TopDownShooter/TopDownShooter/ground/dirt.png" id="1_7witr"]
+[ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/target_practice.gd" id="1_jhj2d"]
+[ext_resource type="PackedScene" uid="uid://d0pa5lx5wffx3" path="res://Scenes/scout.tscn" id="2_0gmdp"]
+[ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/Spawner.gd" id="7_48ehd"]
+[ext_resource type="PackedScene" uid="uid://dg5s1ct70u6pa" path="res://Scenes/ui.tscn" id="7_jloue"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_busqm"]
+size = Vector2(14974, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpk40"]
+size = Vector2(109, 15009)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3c0wy"]
+size = Vector2(105, 14931)
+
+[node name="TargetPractice" type="Node2D"]
+script = ExtResource("1_jhj2d")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(4179, -1432)
+scale = Vector2(0.425, 0.425)
+
+[node name="Soil" type="Sprite2D" parent="."]
+texture_repeat = 3
+position = Vector2(0, -16)
+scale = Vector2(10, 10)
+texture = ExtResource("1_7witr")
+region_enabled = true
+region_rect = Rect2(0, 0, 1500, 1500)
+
+[node name="targets" type="Node2D" parent="."]
+
+[node name="Scout" parent="." groups=["Scout"] instance=ExtResource("2_0gmdp")]
+position = Vector2(0, -101)
+
+[node name="Edges" type="Node2D" parent="."]
+
+[node name="Top" type="StaticBody2D" parent="Edges"]
+position = Vector2(-32, -7680)
+script = ExtResource("7_48ehd")
+collision_shape_path = NodePath("top")
+
+[node name="top" type="CollisionShape2D" parent="Edges/Top"]
+position = Vector2(2, 135.5)
+shape = SubResource("RectangleShape2D_busqm")
+
+[node name="Top2" type="StaticBody2D" parent="Edges"]
+position = Vector2(-32, 7158)
+script = ExtResource("7_48ehd")
+collision_shape_path = NodePath("top")
+
+[node name="top" type="CollisionShape2D" parent="Edges/Top2"]
+position = Vector2(2, -35)
+shape = SubResource("RectangleShape2D_busqm")
+
+[node name="Top3" type="StaticBody2D" parent="Edges"]
+position = Vector2(-7491, -100)
+script = ExtResource("7_48ehd")
+collision_shape_path = NodePath("CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Edges/Top3"]
+position = Vector2(-57.5, -4.5)
+shape = SubResource("RectangleShape2D_lpk40")
+
+[node name="Top4" type="StaticBody2D" parent="Edges"]
+position = Vector2(7386, -141)
+script = ExtResource("7_48ehd")
+collision_shape_path = NodePath("CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Edges/Top4"]
+position = Vector2(58.5, 112.5)
+shape = SubResource("RectangleShape2D_3c0wy")
+
+[node name="Projectiles" type="Node2D" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("7_jloue")]
+
+[connection signal="grenade_shot_from_player" from="Scout" to="." method="_on_scout_grenade_shot_from_player"]
+[connection signal="laser_shot_from_player" from="Scout" to="." method="_on_scout_laser_shot_from_player"]

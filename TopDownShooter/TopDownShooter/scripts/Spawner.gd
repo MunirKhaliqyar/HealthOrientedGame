@@ -4,7 +4,7 @@ extends StaticBody2D
 # Variable to hold the CollisionShape2D
 
 # Load the enemy scene
-var enemy_scene = preload("res://target.tscn")
+var enemy_scene = preload("res://Scenes/target.tscn")
 
 # Create a timer
 var timer = Timer.new()
@@ -24,33 +24,11 @@ func _ready():
 	print("FIRST COLLISION" +str(collision_shape))
 	
 	
-	#
-	## Get the global position of the CollisionShape2D
-	#var global_position = collision_shape.global_position
-	#print("FIRST POSITION" + str(global_position))
-	## Get the shape of the CollisionShape2D
-	#var shape = collision_shape.global_scale
-	#print("FIRST GLOBAL" + str(shape))
-	## Get the shape of the CollisionShape2D
-	#var shape2 = collision_shape.shape
-	#print("SHAPE2" + str(collision_shape.shape))
-	## Get the extents of the shape
-	#var extents = shape2.extents
-	#print("Extents: " + str(extents))
-#
-	## Calculate the actual size of the CollisionShape2D in the scene
-	#var size = extents * 2
-	#print("size" + str(size))
-	#
+  
 	var shape = collision_shape.shape
 	extents = shape.extents
 #
-	## The min and max values are the negative and positive extents, respectively
-	#var min = -shape
-	#var max = shape
-	#print("Min: " + str(min))
-	#print("Max: " + str(max))
-	# Set the timer to call the spawn function after 2 seconds
+
 	timer.wait_time = 2
 	timer.one_shot = false
 	# Connect the timeout signal to the spawn method

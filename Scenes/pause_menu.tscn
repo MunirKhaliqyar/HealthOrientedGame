@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ww0j2a3y2nqe"]
 
-[ext_resource type="Script" path="res://pause_menu.gd" id="1_8caly"]
+[ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/pause_menu.gd" id="1_8caly"]
 
 [node name="pauseMenu" type="CanvasLayer"]
 process_mode = 2

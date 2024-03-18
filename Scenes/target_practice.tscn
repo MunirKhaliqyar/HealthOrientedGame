@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://clyjdnj7akcq3"]
 
 [ext_resource type="Texture2D" uid="uid://lf8ik1b5m6ha" path="res://TopDownShooter/TopDownShooter/ground/dirt.png" id="1_7witr"]
-[ext_resource type="Script" path="res://target_practice.gd" id="1_jhj2d"]
-[ext_resource type="PackedScene" uid="uid://d0pa5lx5wffx3" path="res://scout.tscn" id="2_0gmdp"]
-[ext_resource type="Script" path="res://Spawner.gd" id="7_48ehd"]
-[ext_resource type="PackedScene" uid="uid://dg5s1ct70u6pa" path="res://ui.tscn" id="7_jloue"]
+[ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/target_practice.gd" id="1_jhj2d"]
+[ext_resource type="PackedScene" uid="uid://d0pa5lx5wffx3" path="res://Scenes/scout.tscn" id="2_0gmdp"]
+[ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/Spawner.gd" id="7_48ehd"]
+[ext_resource type="PackedScene" uid="uid://dg5s1ct70u6pa" path="res://Scenes/ui.tscn" id="7_jloue"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_busqm"]
 size = Vector2(14974, 96)
@@ -34,12 +34,12 @@ region_rect = Rect2(0, 0, 1500, 1500)
 
 [node name="Scout" parent="." groups=["Scout"] instance=ExtResource("2_0gmdp")]
 position = Vector2(0, -101)
-player_speed = null
 
 [node name="Edges" type="Node2D" parent="."]
 
 [node name="Top" type="StaticBody2D" parent="Edges"]
 position = Vector2(-32, -7680)
+collision_layer = 16
 script = ExtResource("7_48ehd")
 collision_shape_path = NodePath("top")
 
@@ -49,6 +49,7 @@ shape = SubResource("RectangleShape2D_busqm")
 
 [node name="Top2" type="StaticBody2D" parent="Edges"]
 position = Vector2(-32, 7158)
+collision_layer = 16
 script = ExtResource("7_48ehd")
 collision_shape_path = NodePath("top")
 
@@ -58,6 +59,7 @@ shape = SubResource("RectangleShape2D_busqm")
 
 [node name="Top3" type="StaticBody2D" parent="Edges"]
 position = Vector2(-7491, -100)
+collision_layer = 16
 script = ExtResource("7_48ehd")
 collision_shape_path = NodePath("CollisionShape2D")
 
@@ -67,6 +69,7 @@ shape = SubResource("RectangleShape2D_lpk40")
 
 [node name="Top4" type="StaticBody2D" parent="Edges"]
 position = Vector2(7386, -141)
+collision_layer = 16
 script = ExtResource("7_48ehd")
 collision_shape_path = NodePath("CollisionShape2D")
 

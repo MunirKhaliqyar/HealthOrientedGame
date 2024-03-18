@@ -1,14 +1,14 @@
 extends Node2D
 
 
-var target_scene = preload("res://target_2.tscn")
+var target_scene = preload("res://Scenes/target_2.tscn")
 
 
-var grenade_scene: PackedScene = preload("res://grenade.tscn")
+var grenade_scene: PackedScene = preload("res://Scenes/grenade.tscn")
 	
 	
-var laser_scene: PackedScene = preload("res://laser.tscn")
-var menu_scene = preload("res://pause_menu.tscn")
+var laser_scene: PackedScene = preload("res://Scenes/laser.tscn")
+var menu_scene = preload("res://Scenes/pause_menu.tscn")
 var is_menu_open = false
 
 func _process(delta):

@@ -1,10 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://d0pa5lx5wffx3"]
 
-[ext_resource type="Script" path="res://Scout.gd" id="1_5ep8c"]
+[ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/Scout.gd" id="1_5ep8c"]
 [ext_resource type="Texture2D" uid="uid://dc21g5fwoemmu" path="res://TopDownShooter/TopDownShooter/player/player.png" id="2_idsfl"]
 
 [node name="Scout" type="CharacterBody2D"]
-collision_mask = 11
+scale = Vector2(1.5, 1.5)
+collision_mask = 27
 script = ExtResource("1_5ep8c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
