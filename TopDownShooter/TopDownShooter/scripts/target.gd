@@ -1,5 +1,7 @@
 extends Area2D
 
+@export var xpOnKill = 10
+
 var sprites = [
 	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/1.png",
 	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/2.png",
@@ -48,6 +50,12 @@ func _on_area_entered(area):
 		print("Area entered, freeing target")
 		queue_free()#destroying target
 		Globals.target_destroyed += 1
+		Globals.playerXp += xpOnKill
+		if Globals.playerXp >= Globals.xpForNextLevel:
+			Globals.playerLevel += 1
+			Globals.playerXp = 0
+			Globals.xpForNextLevel += 25
+			Globals.health = 100
 	if area.collision_layer ==2:
 		var bounce_direction = -velocity.normalized()
 		var bounce_distance = bounce_strength + 100

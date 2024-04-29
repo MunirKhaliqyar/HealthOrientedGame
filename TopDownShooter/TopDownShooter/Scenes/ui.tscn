@@ -84,4 +84,19 @@ layout_mode = 2
 texture = ExtResource("4_tui8n")
 expand_mode = 2
 
+[node name="XpProgressBar" type="ProgressBar" parent="."]
+offset_left = 361.0
+offset_top = 17.0
+offset_right = 856.0
+offset_bottom = 44.0
+
+[node name="Level" type="Label" parent="XpProgressBar"]
+offset_left = 226.0
+offset_top = 33.0
+offset_right = 265.0
+offset_bottom = 77.0
+size_flags_vertical = 8
+theme = ExtResource("2_5ga7r")
+text = "0"
+
 [connection signal="pressed" from="MarginContainer/Button" to="." method="_on_button_pressed"]
