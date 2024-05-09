@@ -1,7 +1,5 @@
 extends Area2D
 
-@export var xpOnKill = 10
-
 var sprites = [
 	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/1.png",
 	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/2.png",
@@ -12,9 +10,8 @@ var sprites = [
 	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/7.png",
 	"res://TopDownShooter/TopDownShooter/Sprites/NoBG/8.png"
 ]
-
 # Assuming you have a Timer node as a child of your node
-
+@export var xpOnKill = 10
 var bounce_strength = 200 
 var direction = Vector2() 
 var velocity = Vector2()
@@ -32,7 +29,6 @@ func _ready():
 	# Replace with function body.
 	print("READY")
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	var player = get_tree().get_nodes_in_group("Scout")[0]
@@ -40,8 +36,6 @@ func _process(_delta):
 	velocity = direction * speed 
 	global_position += velocity * _delta
 	#print("Target" + str(global_position))
-	
-
 
 func _on_area_entered(area):
 	print(str(area.collision_layer))
@@ -56,13 +50,12 @@ func _on_area_entered(area):
 			Globals.playerXp = 0
 			Globals.xpForNextLevel += 25
 			Globals.health = 100
-	if area.collision_layer ==2:
+	if area.collision_layer == 2:
 		var bounce_direction = -velocity.normalized()
 		var bounce_distance = bounce_strength + 100
 		var bounce_duration = 0.8  # Adjust as necessary
 		var tween = get_tree().create_tween().bind_node(self)
 		tween.tween_property(self, "global_position", global_position + bounce_direction * bounce_distance, bounce_duration)
-
 
 func _on_body_entered(body):
 	if body.collision_layer == 1:

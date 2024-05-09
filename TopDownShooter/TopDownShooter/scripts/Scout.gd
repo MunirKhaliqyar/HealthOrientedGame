@@ -5,10 +5,7 @@ var is_reloading :bool = false
 var can_grenade: bool = false
 
 signal laser_shot_from_player
-
 signal grenade_shot_from_player
-
-
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 #var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -44,9 +41,6 @@ func _process(_delta):
 	
 	Globals.reload_progress_grenade = percentage_reload*100
 	
-	
-		
-		
 func _physics_process(_delta):
 	# Add the gravity.
 	#if not is_on_floor():
@@ -59,16 +53,11 @@ func _physics_process(_delta):
 	
 	move_and_slide()
 
-
-
 func _on_timer_timeout():
 	is_reloading = false # Replace with function body.
-
 
 func _on_timer_2_timeout():
 	can_grenade = false # Replace with function body.
 
-
 func _on_area_2d_area_entered(area):
-	
 	pass # Replace with function body.
