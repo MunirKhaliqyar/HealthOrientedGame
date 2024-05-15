@@ -47,6 +47,7 @@ expand_mode = 3
 layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("2_5ga7r")
+theme_override_font_sizes/font_size = 22
 text = "0"
 
 [node name="grenadeUI" type="MarginContainer" parent="."]

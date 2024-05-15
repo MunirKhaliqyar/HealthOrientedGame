@@ -11,7 +11,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$TargetCounter/HBoxContainer/Label.text = str(Globals.target_destroyed)
+	$TargetCounter/HBoxContainer/Label.text = "Kill:" + str(Globals.target_destroyed)
 	$grenadeUI/HBoxContainer/ProgressBar.value = Globals.reload_progress_grenade
 	$grenadeUI/HBoxContainer/TextureProgressBar.value = Globals.health
 	var xpPercentage = (Globals.playerXp * 100) / Globals.xpForNextLevel

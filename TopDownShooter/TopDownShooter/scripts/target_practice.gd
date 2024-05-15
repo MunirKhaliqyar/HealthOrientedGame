@@ -5,6 +5,7 @@ var grenade_scene: PackedScene = preload("res://TopDownShooter/TopDownShooter/Sc
 var laser_scene: PackedScene = preload("res://TopDownShooter/TopDownShooter/Scenes/laser.tscn")
 var menu_scene = preload("res://TopDownShooter/TopDownShooter/Scenes/pause_menu.tscn")
 var is_menu_open = false
+#const end_game_menu = preload("res://TopDownShooter/TopdownShooter/Scenes/")
 
 func _process(delta):
 	if Input.is_action_pressed("pauseMenu") and not get_tree().paused:
@@ -13,7 +14,13 @@ func _process(delta):
 		get_tree().paused = true
 		var menu = menu_scene.instantiate()
 		add_child(menu)
+	if Globals.health <= 0:
+		end_game()
 		
+func end_game():
+	print("Game over")
+	get_tree().quit()
+
 func _on_target_6_spawn_new_target():
 	print("signal received")
 	var new_target = target_scene.instantiate() as Area2D
