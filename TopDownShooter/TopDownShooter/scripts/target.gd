@@ -26,8 +26,6 @@ func _ready():
 	var sprite = load(sprite_path)
 	# Set the texture of the Sprite2D node
 	$Sprite2D.texture = sprite
-	# Replace with function body.
-	print("READY")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

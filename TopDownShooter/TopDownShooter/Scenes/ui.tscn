@@ -72,6 +72,17 @@ size_flags_vertical = 4
 value = 66.0
 show_percentage = false
 
+[node name="AmmoCount" type="Label" parent="grenadeUI/HBoxContainer/ProgressBar"]
+layout_mode = 2
+offset_left = 65.0
+offset_top = -27.0
+offset_right = 82.0
+offset_bottom = -7.0
+size_flags_vertical = 8
+theme = ExtResource("2_5ga7r")
+theme_override_font_sizes/font_size = 22
+text = "0"
+
 [node name="TextureProgressBar" type="TextureProgressBar" parent="grenadeUI/HBoxContainer"]
 layout_mode = 2
 value = 50.0
