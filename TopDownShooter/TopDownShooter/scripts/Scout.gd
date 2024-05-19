@@ -40,7 +40,6 @@ func _process(_delta):
 		is_idle = false
 		is_shooting = true
 		Globals.ammoCount += 1
-		print(Globals.ammoCount)
 		if Globals.ammoCount < max_ammo:
 			shoot_frame_index = 0
 			animated_sprite.play("Shoot")

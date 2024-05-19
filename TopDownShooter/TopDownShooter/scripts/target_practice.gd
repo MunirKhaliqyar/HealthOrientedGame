@@ -22,7 +22,6 @@ func end_game():
 	get_tree().quit()
 
 func _on_target_6_spawn_new_target():
-	print("signal received")
 	var new_target = target_scene.instantiate() as Area2D
 	new_target.spawn_new_target.connect(_on_target_6_spawn_new_target)
 	var random_position = Vector2 (randf_range (-7500,7500), randf_range (-7500,7500))
@@ -31,7 +30,6 @@ func _on_target_6_spawn_new_target():
 	$".".add_child(new_target)
 
 func _on_scout_laser_shot_from_player(guntip_position, guntip_direction):
-	print("Laser shot")
 	var laser = laser_scene.instantiate() as Area2D # Replace with function body.
 	#1position
 	laser.position = guntip_position

@@ -36,7 +36,6 @@ func _process(_delta):
 	#print("Target" + str(global_position))
 
 func _on_area_entered(area):
-	print(str(area.collision_layer))
 	if area.collision_layer == 4:
 		area.queue_free() #destroying laser
 		queue_free()#destroying target
