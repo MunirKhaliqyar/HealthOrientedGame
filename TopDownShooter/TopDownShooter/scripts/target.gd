@@ -39,7 +39,6 @@ func _on_area_entered(area):
 	print(str(area.collision_layer))
 	if area.collision_layer == 4:
 		area.queue_free() #destroying laser
-		print("Area entered, freeing target")
 		queue_free()#destroying target
 		Globals.target_destroyed += 1
 		Globals.playerXp += xpOnKill
