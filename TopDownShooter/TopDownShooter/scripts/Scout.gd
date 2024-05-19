@@ -149,4 +149,3 @@ func _on_timer_2_timeout():
 func _on_timer_3_timeout():
 	$AmmoSwapTimer.start()
 	is_swapping_mag = true
-	print("IdleReload")
