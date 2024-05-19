@@ -21,7 +21,7 @@ func _ready():
 	
 	
 	var collision_shape = get_node(collision_shape_path)
-	print("FIRST COLLISION" +str(collision_shape))
+	
 	
 	
   
