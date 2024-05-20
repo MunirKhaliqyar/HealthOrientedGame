@@ -8,6 +8,7 @@ var xpForNextLevel: int = 100
 var playerLevel: int  = 1
 var ammoCount: int = 0
 var maxAmmo: int = 22
+var spawnDelay: float = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

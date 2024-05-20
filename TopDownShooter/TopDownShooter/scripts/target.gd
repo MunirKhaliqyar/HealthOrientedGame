@@ -43,6 +43,13 @@ func _on_area_entered(area):
 		Globals.playerXp += xpOnKill
 		if Globals.playerXp >= Globals.xpForNextLevel:
 			Globals.playerLevel += 1
+			if Globals.spawnDelay > 0.5:
+				Globals.spawnDelay -= 0.5
+			elif Globals.spawnDelay <= 0.5:
+				if Globals.spawnDelay > 0.1:
+					Globals.spawnDelay -= 0.1
+			
+			print(Globals.spawnDelay)
 			Globals.playerXp = 0
 			Globals.xpForNextLevel += 25
 			Globals.health = 100

@@ -18,18 +18,12 @@ func _process(delta):
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
-	
 	var collision_shape = get_node(collision_shape_path)
-	
-	
-	
   
 	var shape = collision_shape.shape
 	extents = shape.extents
-#
 
-	timer.wait_time = 2
+	timer.wait_time = Globals.spawnDelay
 	timer.one_shot = false
 	# Connect the timeout signal to the spawn method
 	timer.connect("timeout", Callable(self, "spawn"))
@@ -46,8 +40,6 @@ func spawn():
 	# Add the enemy to the current scene
 	get_parent().add_child(enemy)
 	
-	
-
 	var random_x = randf_range(-extents.x , extents.x)
 	var random_y = randf_range(-extents.y , extents.y)
 	enemy.global_position = self.global_position + Vector2(random_x, random_y)
