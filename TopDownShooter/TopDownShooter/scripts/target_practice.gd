@@ -46,3 +46,9 @@ func _on_scout_grenade_shot_from_player(guntip_position, guntip_direction):
 	grenade.apply_impulse(guntip_direction*launch_force)
 	$Projectiles.add_child(grenade)
 	# Replace with function body.
+
+func _ready():
+	$AudioStreamPlayer.connect("finished", Callable(self, "_on_AudioStreamPlayer_finished"))
+
+func _on_AudioStreamPlayer_finished():
+	$AudioStreamPlayer.play()
