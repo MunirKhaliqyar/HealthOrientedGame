@@ -19,7 +19,7 @@ func _process(delta):
 		
 func end_game():
 	print("Game over")
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://TopDownShooter/TopDownShooter/Scenes/endMenu.tscn")
 
 func _on_target_6_spawn_new_target():
 	print("signal received")

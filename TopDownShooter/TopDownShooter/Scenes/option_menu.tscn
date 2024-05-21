@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://4mbua7mverlq"]
+
+[ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/Scenes/main_menu.gd" id="1_j3vp4"]
+[ext_resource type="Texture2D" uid="uid://df4yhwhehooxo" path="res://TopDownShooter/TopDownShooter/Sprites/foodImage2.jpg" id="2_dkkgl"]
+[ext_resource type="AudioStream" uid="uid://d22f5xbkd5ds8" path="res://TopDownShooter/TopDownShooter/items/risk-136788.mp3" id="3_um17s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrqcb"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_j3vp4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.360784, 0.27451, 0.290196, 1)
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2"]
+layout_mode = 2
+texture = ExtResource("2_dkkgl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Options
+"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer2/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+
+[node name="Button" type="Button" parent="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 10.89
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_mrqcb")
+text = "Mute Game
+"
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer2/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+
+[node name="quitButton" type="Button" parent="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 10.89
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_mrqcb")
+text = "Back to main menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_um17s")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer3/quitButton" to="." method="_on_main_menu_button_pressed"]

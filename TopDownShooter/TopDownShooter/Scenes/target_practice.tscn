@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://clyjdnj7akcq3"]
+[gd_scene load_steps=10 format=3 uid="uid://clyjdnj7akcq3"]
 
 [ext_resource type="Texture2D" uid="uid://lf8ik1b5m6ha" path="res://TopDownShooter/TopDownShooter/ground/dirt.png" id="1_7witr"]
 [ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/target_practice.gd" id="1_jhj2d"]
 [ext_resource type="PackedScene" uid="uid://d0pa5lx5wffx3" path="res://TopDownShooter/TopDownShooter/Scenes/scout.tscn" id="2_0gmdp"]
+[ext_resource type="AudioStream" uid="uid://nj1ffc2r2oeh" path="res://TopDownShooter/TopDownShooter/items/dark-mystery-trailer-taking-our-time-131566.mp3" id="6_re2hv"]
 [ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/Spawner.gd" id="7_48ehd"]
 [ext_resource type="PackedScene" uid="uid://dg5s1ct70u6pa" path="res://TopDownShooter/TopDownShooter/Scenes/ui.tscn" id="7_jloue"]
 
@@ -78,6 +79,10 @@ shape = SubResource("RectangleShape2D_3c0wy")
 [node name="Projectiles" type="Node2D" parent="."]
 
 [node name="UI" parent="." instance=ExtResource("7_jloue")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_re2hv")
+autoplay = true
 
 [connection signal="grenade_shot_from_player" from="Scout" to="." method="_on_scout_grenade_shot_from_player"]
 [connection signal="laser_shot_from_player" from="Scout" to="." method="_on_scout_laser_shot_from_player"]
