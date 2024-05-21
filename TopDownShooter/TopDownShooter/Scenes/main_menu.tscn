@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://srg282ulqjug"]
+[gd_scene load_steps=7 format=3 uid="uid://0oj0nrxj6yjw"]
 
 [ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/Scenes/main_menu.gd" id="1_4vi4v"]
 [ext_resource type="Texture2D" uid="uid://df4yhwhehooxo" path="res://TopDownShooter/TopDownShooter/Sprites/foodImage2.jpg" id="2_lvec7"]
@@ -45,6 +45,8 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/outline_size = 27
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxTexture_aeopr")
 text = "Wellness Warriors: 

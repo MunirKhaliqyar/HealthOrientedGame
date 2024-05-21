@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dg5s1ct70u6pa"]
+[gd_scene load_steps=7 format=3 uid="uid://dg5s1ct70u6pa"]
 
 [ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/ui.gd" id="1_pirs2"]
 [ext_resource type="Theme" uid="uid://cffeqcknwvps6" path="res://funny.tres" id="2_5ga7r"]
-[ext_resource type="Texture2D" uid="uid://damq21vryl1ui" path="res://TopDownShooter/TopDownShooter/Sprites/target.png" id="3_3wc68"]
 [ext_resource type="Texture2D" uid="uid://di3s4kdtkdtdw" path="res://TopDownShooter/TopDownShooter/ui/progress_bar/bg.png" id="4_arwnm"]
 [ext_resource type="Texture2D" uid="uid://gcpmqj35x8t6" path="res://TopDownShooter/TopDownShooter/ui/grenade.png" id="4_tui8n"]
 [ext_resource type="Texture2D" uid="uid://cxb14vqgeqdbj" path="res://TopDownShooter/TopDownShooter/ui/progress_bar/over.png" id="5_l0367"]
@@ -21,27 +20,17 @@ grow_horizontal = 0
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 
-[node name="Button" type="Button" parent="MarginContainer"]
-layout_mode = 2
-theme = ExtResource("2_5ga7r")
-text = "QUIT"
-
 [node name="TargetCounter" type="MarginContainer" parent="."]
-offset_left = 33.0
-offset_top = 13.0
-offset_right = 179.0
-offset_bottom = 64.0
+offset_left = 3.99999
+offset_top = 5.0
+offset_right = 150.0
+offset_bottom = 56.0
 scale = Vector2(1.71107, 1.32026)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TargetCounter"]
 layout_mode = 2
 theme_override_constants/separation = 40
 alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="TargetCounter/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("3_3wc68")
-expand_mode = 3
 
 [node name="Label" type="Label" parent="TargetCounter/HBoxContainer"]
 layout_mode = 2
@@ -111,5 +100,3 @@ offset_bottom = 77.0
 size_flags_vertical = 8
 theme = ExtResource("2_5ga7r")
 text = "0"
-
-[connection signal="pressed" from="MarginContainer/Button" to="." method="_on_button_pressed"]

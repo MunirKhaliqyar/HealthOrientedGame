@@ -24,6 +24,13 @@ var is_shooting: bool = false
 
 func _ready():
 	# Set initial animation speeds
+	Globals.health = 100
+	Globals.playerLevel = 1
+	Globals.playerXp = 0
+	Globals.xpForNextLevel = 100
+	Globals.ammoCount = 0
+	Globals.spawnDelay = 3
+	Globals.target_destroyed = 0
 	animated_sprite.speed_scale = default_animation_speed
 	
 

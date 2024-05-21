@@ -55,8 +55,8 @@ func _on_area_entered(area):
 			Globals.health = 100
 	if area.collision_layer == 2:
 		var bounce_direction = -velocity.normalized()
-		var bounce_distance = bounce_strength + 100
-		var bounce_duration = 0.8  # Adjust as necessary
+		var bounce_distance = bounce_strength + 100 
+		var bounce_duration = 0.2  # Adjust as necessary
 		var tween = get_tree().create_tween().bind_node(self)
 		tween.tween_property(self, "global_position", global_position + bounce_direction * bounce_distance, bounce_duration)
 

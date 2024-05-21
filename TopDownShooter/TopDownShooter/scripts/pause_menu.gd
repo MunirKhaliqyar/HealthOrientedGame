@@ -12,7 +12,8 @@ func _process(delta):
 
 
 func _on_quit_pressed():
-	get_tree().quit() # Replace with function body.
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://TopDownShooter/TopDownShooter/Scenes/main_menu.tscn")
 
 
 func _on_resume_pressed():

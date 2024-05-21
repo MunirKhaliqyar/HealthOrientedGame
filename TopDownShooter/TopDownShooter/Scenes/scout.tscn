@@ -735,7 +735,7 @@ limit_right = 7500
 limit_bottom = 7500
 
 [node name="guntip" type="Node2D" parent="."]
-position = Vector2(245.333, 58)
+position = Vector2(208, 66)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
