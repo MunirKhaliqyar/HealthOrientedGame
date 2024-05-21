@@ -10,14 +10,6 @@ bg_color = Color(0, 0, 0, 1)
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_j3vp4")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.360784, 0.27451, 0.290196, 1)
-
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -49,17 +41,25 @@ alignment = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer2/VBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 0
 
-[node name="Button" type="Button" parent="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer2"]
+[node name="Label" type="Label" parent="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Set Volume
+"
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer2/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
-size_flags_stretch_ratio = 10.89
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxFlat_mrqcb")
-text = "Mute Game
-"
+theme_override_constants/margin_left = 0
+
+[node name="Label" type="Label" parent="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer2/VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -78,4 +78,16 @@ text = "Back to main menu"
 stream = ExtResource("3_um17s")
 autoplay = true
 
+[node name="slider" type="HSlider" parent="."]
+offset_left = 473.0
+offset_top = 335.0
+offset_right = 673.0
+offset_bottom = 375.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 10.89
+min_value = -30.0
+max_value = 0.0
+
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer3/quitButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="value_changed" from="slider" to="." method="_on_slider_value_changed"]

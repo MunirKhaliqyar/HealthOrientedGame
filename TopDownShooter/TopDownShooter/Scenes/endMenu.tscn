@@ -7,7 +7,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrqcb"]
 bg_color = Color(0, 0, 0, 1)
 
-[node name="MainMenu" type="CanvasLayer"]
+[node name="MainMenu2" type="CanvasLayer"]
 script = ExtResource("1_cmagl")
 
 [node name="ColorRect" type="ColorRect" parent="."]
