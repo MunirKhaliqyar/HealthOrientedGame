@@ -17,7 +17,7 @@ func _process(delta):
 	var xpPercentage = (Globals.playerXp * 100) / Globals.xpForNextLevel
 	$XpProgressBar.value = xpPercentage
 	$XpProgressBar/Level.text = str(Globals.playerLevel)
-	
+	$grenadeUI/HBoxContainer/ProgressBar/AmmoCount.text = str(Globals.maxAmmo - Globals.ammoCount)
 	if Globals.health < 30:
 		$grenadeUI/HBoxContainer/TextureProgressBar.set_progress_texture(red_texture)
 	elif Globals.health < 55:

@@ -1,20 +1,730 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0pa5lx5wffx3"]
+[gd_scene load_steps=176 format=3 uid="uid://d0pa5lx5wffx3"]
 
 [ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/Scout.gd" id="1_5ep8c"]
-[ext_resource type="Texture2D" uid="uid://dc21g5fwoemmu" path="res://TopDownShooter/TopDownShooter/player/player.png" id="2_idsfl"]
+[ext_resource type="Texture2D" uid="uid://dqjcuyhnc7y25" path="res://TopDownShooter/TopDownShooter/Scenes/Armature_newAnimation_01.png" id="2_4nsyn"]
+[ext_resource type="Texture2D" uid="uid://cufdirq707is2" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_00.png" id="3_vxddj"]
+[ext_resource type="Texture2D" uid="uid://bxwr5ujsvmuyu" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_01.png" id="4_vmow6"]
+[ext_resource type="Texture2D" uid="uid://ckhadydcvin7q" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_02.png" id="5_eoj1k"]
+[ext_resource type="Texture2D" uid="uid://bj45rgldr5n24" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_03.png" id="6_inw2v"]
+[ext_resource type="Texture2D" uid="uid://7cesj6y12mus" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_04.png" id="7_rngrt"]
+[ext_resource type="Texture2D" uid="uid://ilveggo81asj" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_05.png" id="8_bphf1"]
+[ext_resource type="Texture2D" uid="uid://brbusaxk25hyr" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_06.png" id="9_15ypw"]
+[ext_resource type="Texture2D" uid="uid://dc4sdlstnx80n" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_07.png" id="10_7slbr"]
+[ext_resource type="Texture2D" uid="uid://cq5uiehwn3qer" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_08.png" id="11_ue2xj"]
+[ext_resource type="Texture2D" uid="uid://bbn6mm5b078gs" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_09.png" id="12_uip31"]
+[ext_resource type="Texture2D" uid="uid://belv267bhncxe" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_10.png" id="13_pg4ro"]
+[ext_resource type="Texture2D" uid="uid://c0r6l3errk4ym" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_11.png" id="14_5s83j"]
+[ext_resource type="Texture2D" uid="uid://cf3sbydm16lbb" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_12.png" id="15_63uqf"]
+[ext_resource type="Texture2D" uid="uid://b66i4tiv17si8" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_13.png" id="16_waxyn"]
+[ext_resource type="Texture2D" uid="uid://bk5sqjf4njmwu" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_14.png" id="17_q1il0"]
+[ext_resource type="Texture2D" uid="uid://bkioketwbw3yk" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_15.png" id="18_bh6m3"]
+[ext_resource type="Texture2D" uid="uid://cr1lktxsmfiy5" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_16.png" id="19_nr0q1"]
+[ext_resource type="Texture2D" uid="uid://6fpwiyrtxqct" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_17.png" id="20_um410"]
+[ext_resource type="Texture2D" uid="uid://cc3h3gyssp147" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_18.png" id="21_qqyel"]
+[ext_resource type="Texture2D" uid="uid://cjsxn1jjrfkj0" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_19.png" id="22_vwrm7"]
+[ext_resource type="Texture2D" uid="uid://cp7u7qkj6qjtd" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_20.png" id="23_a27jc"]
+[ext_resource type="Texture2D" uid="uid://q85e675hkx6a" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_21.png" id="24_4d6eg"]
+[ext_resource type="Texture2D" uid="uid://dnhq1nghbvjqf" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_22.png" id="25_bsoky"]
+[ext_resource type="Texture2D" uid="uid://b6qkjolly1x1b" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_23.png" id="26_kml32"]
+[ext_resource type="Texture2D" uid="uid://duisqbokdujf2" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_24.png" id="27_s13bn"]
+[ext_resource type="Texture2D" uid="uid://dveu24ijo60eh" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_25.png" id="28_d50p1"]
+[ext_resource type="Texture2D" uid="uid://00yk234u75jq" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_26.png" id="29_apbj5"]
+[ext_resource type="Texture2D" uid="uid://dk3ekvm0i6hja" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_27.png" id="30_qtgl2"]
+[ext_resource type="Texture2D" uid="uid://jfq3cqcdr8mb" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_28.png" id="31_ajfbc"]
+[ext_resource type="Texture2D" uid="uid://cip8u1lm3mpvd" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_29.png" id="32_iqadh"]
+[ext_resource type="Texture2D" uid="uid://0dc4trdnmogw" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_30.png" id="33_o1ghb"]
+[ext_resource type="Texture2D" uid="uid://c7vk3j2dilso8" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_31.png" id="34_vgcuu"]
+[ext_resource type="Texture2D" uid="uid://cg5jf2dv7ojwk" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_32.png" id="35_eauq1"]
+[ext_resource type="Texture2D" uid="uid://0a77pjr5i5x" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_33.png" id="36_g73wm"]
+[ext_resource type="Texture2D" uid="uid://lo7i5xcqyybs" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_34.png" id="37_k2qbn"]
+[ext_resource type="Texture2D" uid="uid://cc66umitl3fh5" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_35.png" id="38_xayll"]
+[ext_resource type="Texture2D" uid="uid://yvbatrl13xjy" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_36.png" id="39_u4x0v"]
+[ext_resource type="Texture2D" uid="uid://cocf1gc7uvmau" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_37.png" id="40_vg1mj"]
+[ext_resource type="Texture2D" uid="uid://bnvngjrqxq8e5" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_38.png" id="41_i4ngt"]
+[ext_resource type="Texture2D" uid="uid://dkjsokgllvrlo" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_39.png" id="42_fidd5"]
+[ext_resource type="Texture2D" uid="uid://cjughtapec52s" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_40.png" id="43_hryla"]
+[ext_resource type="Texture2D" uid="uid://c2mn02opa8enm" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_41.png" id="44_sdfn3"]
+[ext_resource type="Texture2D" uid="uid://6vtg6exxu238" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_42.png" id="45_mgqwy"]
+[ext_resource type="Texture2D" uid="uid://b33mqn4w1jaee" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_43.png" id="46_6f13s"]
+[ext_resource type="Texture2D" uid="uid://b7ld5y54sef7s" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_44.png" id="47_x0cyk"]
+[ext_resource type="Texture2D" uid="uid://clrs2jfipgeo5" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_45.png" id="48_m86as"]
+[ext_resource type="Texture2D" uid="uid://dkcfh3vwuqcmy" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_46.png" id="49_1bf6w"]
+[ext_resource type="Texture2D" uid="uid://co2typ0evdsa" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_47.png" id="50_2fhvl"]
+[ext_resource type="Texture2D" uid="uid://ce7io3834yena" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_48.png" id="51_10fbd"]
+[ext_resource type="Texture2D" uid="uid://1hwan4pe7714" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_49.png" id="52_kg0ox"]
+[ext_resource type="Texture2D" uid="uid://wqqrb86quc5q" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/run/Armature_newAnimation_50.png" id="53_bprsl"]
+[ext_resource type="Texture2D" uid="uid://d2tjvwq2ibary" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_000.png" id="54_xroci"]
+[ext_resource type="Texture2D" uid="uid://bw77i1j6ajg1u" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_001.png" id="55_nwhrc"]
+[ext_resource type="Texture2D" uid="uid://b2g7qe0pbouoe" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_002.png" id="56_6nex2"]
+[ext_resource type="Texture2D" uid="uid://d4f18fl2jejm8" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_003.png" id="57_7hqyu"]
+[ext_resource type="Texture2D" uid="uid://blo0h1uui3k1h" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_004.png" id="58_acuuy"]
+[ext_resource type="Texture2D" uid="uid://h8arh8r744wl" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_005.png" id="59_0expq"]
+[ext_resource type="Texture2D" uid="uid://b51ov22r6m7ld" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_006.png" id="60_yogv3"]
+[ext_resource type="Texture2D" uid="uid://w4v0g5wyavrd" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_007.png" id="61_8vfrd"]
+[ext_resource type="Texture2D" uid="uid://btu8bbpanb8fi" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_008.png" id="62_vvu84"]
+[ext_resource type="Texture2D" uid="uid://7sjyy34wn8vi" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_009.png" id="63_3hacf"]
+[ext_resource type="Texture2D" uid="uid://ccst6s2y3kwsw" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_010.png" id="64_3xj1s"]
+[ext_resource type="Texture2D" uid="uid://c5uf15vp14i3u" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_011.png" id="65_nxxdy"]
+[ext_resource type="Texture2D" uid="uid://dx6rkt52fx20d" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_012.png" id="66_ygfjo"]
+[ext_resource type="Texture2D" uid="uid://dsg5spdbykae" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_013.png" id="67_cqnig"]
+[ext_resource type="Texture2D" uid="uid://bdbfpqrj40etj" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_014.png" id="68_b6jfg"]
+[ext_resource type="Texture2D" uid="uid://b76y1cvynr8ui" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_015.png" id="69_dva1x"]
+[ext_resource type="Texture2D" uid="uid://bqkk4pkmjuuvr" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_016.png" id="70_wqa0i"]
+[ext_resource type="Texture2D" uid="uid://c1vyhgr0l1hyf" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_017.png" id="71_c8fa6"]
+[ext_resource type="Texture2D" uid="uid://3cq621mifybd" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_018.png" id="72_pbd4v"]
+[ext_resource type="Texture2D" uid="uid://b5iv8kdbngskf" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_019.png" id="73_hv6rp"]
+[ext_resource type="Texture2D" uid="uid://whv5ecj43l3u" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_020.png" id="74_bkpjd"]
+[ext_resource type="Texture2D" uid="uid://b00hh3thf7p3t" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_021.png" id="75_7145t"]
+[ext_resource type="Texture2D" uid="uid://c8dxoouunu4af" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_022.png" id="76_5itky"]
+[ext_resource type="Texture2D" uid="uid://ch47rb265d66m" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_023.png" id="77_r7lq5"]
+[ext_resource type="Texture2D" uid="uid://dew7q4apufddk" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_024.png" id="78_f2t75"]
+[ext_resource type="Texture2D" uid="uid://cbn5nvip4ra5y" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_025.png" id="79_k031k"]
+[ext_resource type="Texture2D" uid="uid://cnrka3wol8va0" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_026.png" id="80_btbvr"]
+[ext_resource type="Texture2D" uid="uid://bv2ffj3yji5im" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_027.png" id="81_vomat"]
+[ext_resource type="Texture2D" uid="uid://e4bceuvspwhi" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_028.png" id="82_1g37o"]
+[ext_resource type="Texture2D" uid="uid://j6voenr6qgp8" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_029.png" id="83_o44nv"]
+[ext_resource type="Texture2D" uid="uid://dh2nukt88uv5s" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_030.png" id="84_q6xuw"]
+[ext_resource type="Texture2D" uid="uid://m8s2invf5wv5" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_031.png" id="85_i2stq"]
+[ext_resource type="Texture2D" uid="uid://bng66erb8o3p" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_032.png" id="86_654ht"]
+[ext_resource type="Texture2D" uid="uid://pet8b1cveqjr" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_033.png" id="87_rg5ps"]
+[ext_resource type="Texture2D" uid="uid://cavb4c3b48khy" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_034.png" id="88_5erfu"]
+[ext_resource type="Texture2D" uid="uid://cwkj1ure2kbwr" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_035.png" id="89_p1ob4"]
+[ext_resource type="Texture2D" uid="uid://cm3fps2lenhkp" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_036.png" id="90_wf12s"]
+[ext_resource type="Texture2D" uid="uid://dld2mpxx104pf" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_037.png" id="91_4se36"]
+[ext_resource type="Texture2D" uid="uid://dvywqauwy82jh" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_038.png" id="92_te00l"]
+[ext_resource type="Texture2D" uid="uid://s6xesdhb0q3y" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_039.png" id="93_lf71y"]
+[ext_resource type="Texture2D" uid="uid://c3mwdhs0yk80x" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_040.png" id="94_shi2c"]
+[ext_resource type="Texture2D" uid="uid://c1sjs1dl1upv8" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_041.png" id="95_llc0q"]
+[ext_resource type="Texture2D" uid="uid://dw4xnwde05y3x" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_042.png" id="96_k8sbq"]
+[ext_resource type="Texture2D" uid="uid://cwr6i52jsxkps" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_043.png" id="97_glo4u"]
+[ext_resource type="Texture2D" uid="uid://u0b06kk6w3bx" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_044.png" id="98_urtlj"]
+[ext_resource type="Texture2D" uid="uid://dnobhxyfqhk7r" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_045.png" id="99_nwhrh"]
+[ext_resource type="Texture2D" uid="uid://5xo00rl0m7u7" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_046.png" id="100_q2w0j"]
+[ext_resource type="Texture2D" uid="uid://dx6gr63kisxem" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_047.png" id="101_mw0nj"]
+[ext_resource type="Texture2D" uid="uid://ccds8lpk6qnso" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_048.png" id="102_7ns47"]
+[ext_resource type="Texture2D" uid="uid://btn7nxjj0t3lb" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_049.png" id="103_hkovb"]
+[ext_resource type="Texture2D" uid="uid://ufrwhkd3b4i" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_050.png" id="104_nu86l"]
+[ext_resource type="Texture2D" uid="uid://bv3a1dkj50q1w" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_051.png" id="105_vguxh"]
+[ext_resource type="Texture2D" uid="uid://dmc51flaa6aqf" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_052.png" id="106_katu2"]
+[ext_resource type="Texture2D" uid="uid://b40mxp6uyomb2" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_053.png" id="107_emn7a"]
+[ext_resource type="Texture2D" uid="uid://cco774m4pf7bm" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_054.png" id="108_ibwfl"]
+[ext_resource type="Texture2D" uid="uid://cxl5a6khbd2em" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_055.png" id="109_msiyq"]
+[ext_resource type="Texture2D" uid="uid://4c4f47mdhvh1" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_056.png" id="110_4m3p6"]
+[ext_resource type="Texture2D" uid="uid://duipwr76t8pg1" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_057.png" id="111_5oqaa"]
+[ext_resource type="Texture2D" uid="uid://dyrojrrbk6bff" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_058.png" id="112_57wgl"]
+[ext_resource type="Texture2D" uid="uid://d4epem52q3875" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_059.png" id="113_e0b1o"]
+[ext_resource type="Texture2D" uid="uid://df08bdxewavqr" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_060.png" id="114_hwgm0"]
+[ext_resource type="Texture2D" uid="uid://df44uyhefuybd" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_061.png" id="115_td21n"]
+[ext_resource type="Texture2D" uid="uid://vqx8e0sdx6tf" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_062.png" id="116_yl15d"]
+[ext_resource type="Texture2D" uid="uid://b44j6knm8mfhn" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_063.png" id="117_qkuw1"]
+[ext_resource type="Texture2D" uid="uid://bl1n7151m6w73" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_064.png" id="118_bkiuv"]
+[ext_resource type="Texture2D" uid="uid://dbe1d8piuwqdq" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_065.png" id="119_o0duu"]
+[ext_resource type="Texture2D" uid="uid://buiyts6wxlngb" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_066.png" id="120_fky1i"]
+[ext_resource type="Texture2D" uid="uid://b15tsr8fpxd6v" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_067.png" id="121_lkuwm"]
+[ext_resource type="Texture2D" uid="uid://bfqv8pelmxpgk" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_068.png" id="122_r708q"]
+[ext_resource type="Texture2D" uid="uid://j1077am8pvbf" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_069.png" id="123_hnn7n"]
+[ext_resource type="Texture2D" uid="uid://b1ypnu7wqairk" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_070.png" id="124_7s5rg"]
+[ext_resource type="Texture2D" uid="uid://dpr2og1kb7ned" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_071.png" id="125_x46on"]
+[ext_resource type="Texture2D" uid="uid://c8yarfofbbxti" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_072.png" id="126_1bxch"]
+[ext_resource type="Texture2D" uid="uid://0vsgqq4x760u" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_073.png" id="127_8qksp"]
+[ext_resource type="Texture2D" uid="uid://bm62kuybydda1" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_074.png" id="128_hfr88"]
+[ext_resource type="Texture2D" uid="uid://cx15oi14cebqj" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_075.png" id="129_x3y7u"]
+[ext_resource type="Texture2D" uid="uid://dm4ng31jir8dq" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_076.png" id="130_ifamd"]
+[ext_resource type="Texture2D" uid="uid://c08c6qj52co5h" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_077.png" id="131_il5p8"]
+[ext_resource type="Texture2D" uid="uid://blrw04x7wsqgo" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_078.png" id="132_g8k8b"]
+[ext_resource type="Texture2D" uid="uid://dtucngug4hjjb" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_079.png" id="133_xrsa0"]
+[ext_resource type="Texture2D" uid="uid://b8fvim3lmvtvc" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_080.png" id="134_t5sry"]
+[ext_resource type="Texture2D" uid="uid://dbep5oc8ehicr" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_081.png" id="135_x6ari"]
+[ext_resource type="Texture2D" uid="uid://d2oq2e4ipmrc3" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_082.png" id="136_ufjo6"]
+[ext_resource type="Texture2D" uid="uid://bgkmkq2ou54cy" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_083.png" id="137_7h1dl"]
+[ext_resource type="Texture2D" uid="uid://4x70m2h5vbbg" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_084.png" id="138_pkbga"]
+[ext_resource type="Texture2D" uid="uid://hnodkv8dvngt" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_085.png" id="139_p1d3s"]
+[ext_resource type="Texture2D" uid="uid://0ptaf2s6qn61" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_086.png" id="140_ro6o2"]
+[ext_resource type="Texture2D" uid="uid://dvx7lu80x868f" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_087.png" id="141_bg7oq"]
+[ext_resource type="Texture2D" uid="uid://b6oe7s3x8n6vo" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_088.png" id="142_rmhmy"]
+[ext_resource type="Texture2D" uid="uid://bof4d6ktd8oai" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_089.png" id="143_a36sk"]
+[ext_resource type="Texture2D" uid="uid://dgermxyiqjdeb" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_090.png" id="144_wmbmt"]
+[ext_resource type="Texture2D" uid="uid://c2x0spgf5k3u4" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_091.png" id="145_3gfhe"]
+[ext_resource type="Texture2D" uid="uid://dydyr7f4p0gfy" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_092.png" id="146_jvb3s"]
+[ext_resource type="Texture2D" uid="uid://rubvwfy8jtd" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_093.png" id="147_lvxul"]
+[ext_resource type="Texture2D" uid="uid://de3e0wtiwwk4r" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_094.png" id="148_fmmlh"]
+[ext_resource type="Texture2D" uid="uid://cdaxxbnilwaey" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_095.png" id="149_wgkdm"]
+[ext_resource type="Texture2D" uid="uid://l4cmfl0tgean" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_096.png" id="150_rp5j8"]
+[ext_resource type="Texture2D" uid="uid://bmo5o1dutp1xd" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_097.png" id="151_0oghu"]
+[ext_resource type="Texture2D" uid="uid://c48d8u3mau4th" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_098.png" id="152_g2koy"]
+[ext_resource type="Texture2D" uid="uid://dqmq7xtr6y5hp" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_099.png" id="153_5ctq2"]
+[ext_resource type="Texture2D" uid="uid://gx5v0ufoxlfp" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_100.png" id="154_17yhx"]
+[ext_resource type="Texture2D" uid="uid://3i16e6etmas8" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_101.png" id="155_etna8"]
+[ext_resource type="Texture2D" uid="uid://bl3dxlfpf25nk" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_102.png" id="156_cwmuq"]
+[ext_resource type="Texture2D" uid="uid://ccggofjqc5jl0" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_103.png" id="157_aau07"]
+[ext_resource type="Texture2D" uid="uid://bjpqpkucq816n" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_104.png" id="158_j645v"]
+[ext_resource type="Texture2D" uid="uid://bikrehn6evn0b" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_105.png" id="159_48t0r"]
+[ext_resource type="Texture2D" uid="uid://b5lleqn76j54h" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_106.png" id="160_5wliw"]
+[ext_resource type="Texture2D" uid="uid://bb51m01pv30ek" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_107.png" id="161_mq4vy"]
+[ext_resource type="Texture2D" uid="uid://trn4hv5oo1at" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_108.png" id="162_ky808"]
+[ext_resource type="Texture2D" uid="uid://bl3vjrdmc2x54" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_109.png" id="163_x4lwg"]
+[ext_resource type="Texture2D" uid="uid://qabxff140eyl" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_110.png" id="164_7xdvb"]
+[ext_resource type="Texture2D" uid="uid://c82yv08w0p4ta" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_111.png" id="165_s5oye"]
+[ext_resource type="Texture2D" uid="uid://dhgy206q54ovt" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_112.png" id="166_72013"]
+[ext_resource type="Texture2D" uid="uid://diaeqt48t4m46" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_113.png" id="167_357bs"]
+[ext_resource type="Texture2D" uid="uid://v4na0041l5qi" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_114.png" id="168_vt12e"]
+[ext_resource type="Texture2D" uid="uid://dlv6el5ysccxd" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_115.png" id="169_csgx4"]
+[ext_resource type="Texture2D" uid="uid://b48jj74p7q0gs" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_116.png" id="170_m8b7v"]
+[ext_resource type="Texture2D" uid="uid://c01ajvtgv5jll" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_117.png" id="171_s4881"]
+[ext_resource type="Texture2D" uid="uid://do0dh608ib3vi" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_118.png" id="172_chlcm"]
+[ext_resource type="Texture2D" uid="uid://4y32oioedqoa" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_119.png" id="173_hinup"]
+[ext_resource type="Texture2D" uid="uid://du2myelwwtlo4" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_120.png" id="174_sd8lk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ndvpf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vxddj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vmow6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_eoj1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_inw2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rngrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bphf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_15ypw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7slbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ue2xj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_uip31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pg4ro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5s83j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_63uqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_waxyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_q1il0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_bh6m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_nr0q1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_um410")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qqyel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_vwrm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_a27jc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_4d6eg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_bsoky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_kml32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_s13bn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_d50p1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_apbj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_qtgl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ajfbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_iqadh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_o1ghb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_vgcuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_eauq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_g73wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_k2qbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_xayll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_u4x0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_vg1mj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_i4ngt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_fidd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_hryla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_sdfn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_mgqwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_6f13s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_x0cyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_m86as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_1bf6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_2fhvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_10fbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_kg0ox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_bprsl")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_xroci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_nwhrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_6nex2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_7hqyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_acuuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_0expq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_yogv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_8vfrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_vvu84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_3hacf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_3xj1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_nxxdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_ygfjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_cqnig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_b6jfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_dva1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_wqa0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_c8fa6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_pbd4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_hv6rp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_bkpjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_7145t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_5itky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_r7lq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_f2t75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_k031k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_btbvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_vomat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_1g37o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_o44nv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_q6xuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_i2stq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_654ht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_rg5ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_5erfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_p1ob4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_wf12s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_4se36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_te00l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_lf71y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_shi2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_llc0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_k8sbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_glo4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_urtlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_nwhrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_q2w0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_mw0nj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_7ns47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_hkovb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_nu86l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_vguxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_katu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_emn7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_ibwfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_msiyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_4m3p6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_5oqaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_57wgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_e0b1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_hwgm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_td21n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_yl15d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_qkuw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_bkiuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_o0duu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_fky1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_lkuwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_r708q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_hnn7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_7s5rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_x46on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_1bxch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_8qksp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_hfr88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_x3y7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_ifamd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_il5p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_g8k8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_xrsa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_t5sry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_x6ari")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_ufjo6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_7h1dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_pkbga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_p1d3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_ro6o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_bg7oq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_rmhmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_a36sk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_wmbmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_3gfhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_jvb3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_lvxul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_fmmlh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_wgkdm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_rp5j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_0oghu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_g2koy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_5ctq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_17yhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_etna8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_cwmuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_aau07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_j645v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_48t0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_5wliw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_mq4vy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_ky808")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_x4lwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_7xdvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_s5oye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_72013")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_357bs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_vt12e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_csgx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_m8b7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_s4881")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_chlcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_hinup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_sd8lk")
+}],
+"loop": false,
+"name": &"Shoot",
+"speed": 30.0
+}]
 
 [node name="Scout" type="CharacterBody2D"]
 scale = Vector2(1.5, 1.5)
 collision_mask = 27
 script = ExtResource("1_5ep8c")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 1.5708
-texture = ExtResource("2_idsfl")
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = 3.05433
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(-13.3333, -15.3333, -98.6667, -38, -69.3333, 30, -39.3333, 44, -4, 51.3333, 53.3333, 19.3333, 62.6667, 2.66667, 69.3333, -12.6667, 67.3333, -44, 57.3333, -58.6667, 18.6667, -52, 3.33333, -46.6667, -13.3333, -38, -99.3333, -39.3333)
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionPolygon2D"]
+visible = false
 rotation = 1.5708
-polygon = PackedVector2Array(22, -23, 69, -125, -27, -51, -55, 68, 44, 104, 69, -115)
+texture = ExtResource("2_4nsyn")
+
+[node name="PlayerAnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionPolygon2D"]
+rotation = 1.5708
+scale = Vector2(0.833333, 0.833333)
+sprite_frames = SubResource("SpriteFrames_ndvpf")
+animation = &"Default"
+speed_scale = 2.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -1)
@@ -25,15 +735,20 @@ limit_right = 7500
 limit_bottom = 7500
 
 [node name="guntip" type="Node2D" parent="."]
-position = Vector2(84, 18)
+position = Vector2(245.333, 58)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
 
-[node name="Timer2" type="Timer" parent="."]
-wait_time = 3.0
+[node name="AmmoSwapTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="IdleTimer" type="Timer" parent="."]
+wait_time = 1.8
 one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="AmmoSwapTimer" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="IdleTimer" to="." method="_on_timer_3_timeout"]

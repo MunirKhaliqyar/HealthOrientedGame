@@ -26,8 +26,6 @@ func _ready():
 	var sprite = load(sprite_path)
 	# Set the texture of the Sprite2D node
 	$Sprite2D.texture = sprite
-	# Replace with function body.
-	print("READY")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -38,15 +36,20 @@ func _process(_delta):
 	#print("Target" + str(global_position))
 
 func _on_area_entered(area):
-	print(str(area.collision_layer))
 	if area.collision_layer == 4:
 		area.queue_free() #destroying laser
-		print("Area entered, freeing target")
 		queue_free()#destroying target
 		Globals.target_destroyed += 1
 		Globals.playerXp += xpOnKill
 		if Globals.playerXp >= Globals.xpForNextLevel:
 			Globals.playerLevel += 1
+			if Globals.spawnDelay > 0.5:
+				Globals.spawnDelay -= 0.5
+			elif Globals.spawnDelay <= 0.5:
+				if Globals.spawnDelay > 0.1:
+					Globals.spawnDelay -= 0.1
+			
+			print(Globals.spawnDelay)
 			Globals.playerXp = 0
 			Globals.xpForNextLevel += 25
 			Globals.health = 100
