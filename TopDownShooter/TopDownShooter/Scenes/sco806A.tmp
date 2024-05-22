@@ -709,6 +709,10 @@ animations = [{
 scale = Vector2(1.5, 1.5)
 collision_mask = 27
 script = ExtResource("1_5ep8c")
+player_speed = null
+backward_speed_multiplier = null
+default_animation_speed = null
+shoot_animation_speed = null
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 rotation = 3.05433
@@ -721,7 +725,6 @@ rotation = 1.5708
 texture = ExtResource("2_4nsyn")
 
 [node name="PlayerAnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionPolygon2D"]
-z_index = 1
 rotation = 1.5708
 scale = Vector2(0.833333, 0.833333)
 sprite_frames = SubResource("SpriteFrames_ndvpf")
@@ -753,7 +756,6 @@ one_shot = true
 
 [node name="DustTrail" parent="." instance=ExtResource("175_4aa1e")]
 position = Vector2(-182, 60)
-scale = Vector2(1e-05, 1e-05)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="AmmoSwapTimer" to="." method="_on_timer_2_timeout"]

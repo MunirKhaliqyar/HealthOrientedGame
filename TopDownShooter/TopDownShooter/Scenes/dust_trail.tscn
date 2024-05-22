@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6nrp3ifljyu8"]
+
+[ext_resource type="Texture2D" uid="uid://b5mhrahmprhwv" path="res://TopDownShooter/TopDownShooter/Scenes/dust.png" id="1_354yx"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4xjhh"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_utmhh"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="DustTrail" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_4xjhh")
+amount = 10
+lifetime = 1.2
+preprocess = 1.0
+lifetime_randomness = 0.7
+texture = ExtResource("1_354yx")
+gravity = Vector2(0, 0)
+angle_min = 0.1
+angle_max = 0.1
+scale_amount_min = 0.8
+scale_amount_max = 20.0
+color_ramp = SubResource("Gradient_utmhh")
+anim_speed_min = 1.0
+anim_speed_max = 1.0

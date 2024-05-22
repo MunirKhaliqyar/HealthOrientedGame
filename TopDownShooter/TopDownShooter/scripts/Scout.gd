@@ -13,6 +13,8 @@ signal grenade_shot_from_player
 
 # Reference to the AnimatedSprite2D node
 @onready var animated_sprite: AnimatedSprite2D = $CollisionPolygon2D/PlayerAnimatedSprite2D
+@onready var dust_trail: Node2D = $DustTrail
+@onready var particles: CPUParticles2D = null
 
 # Adjust animation speeds
 @export var default_animation_speed: float = 1.5
@@ -32,7 +34,15 @@ func _ready():
 	Globals.spawnDelay = 3
 	Globals.target_destroyed = 0
 	animated_sprite.speed_scale = default_animation_speed
-	
+
+	if dust_trail == null:
+		print("Error: DustTrail node not found!")
+	else:
+		particles = dust_trail.get_node("CPUParticles2D")
+		if particles == null:
+			print("Error: CPUParticle2D node not found under DustTrail!")
+		else:
+			particles.emitting = false
 
 func _process(_delta):
 	var percentage_reload = ( $AmmoSwapTimer.wait_time - $AmmoSwapTimer.time_left) / $AmmoSwapTimer.wait_time 
@@ -115,6 +125,15 @@ func _physics_process(_delta):
 	velocity = direction * speed
 	move_and_slide()
 
+	#Control particle emission based on movement
+	if particles:
+		if direction.length() > 0:
+			particles.emitting = true
+		else:
+			particles.emitting = false
+	else:
+		print("Warning: CPUParticles2D node is null during _physics_process")
+		
 	# Manually control the shooting animation frame
 	if is_shooting:
 		animated_sprite.frame = shoot_frame_index
