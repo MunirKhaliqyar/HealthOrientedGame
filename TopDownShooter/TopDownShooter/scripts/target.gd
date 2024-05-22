@@ -85,9 +85,9 @@ func die():
 	explosion.emitting = true
 	
 	#Create and configure the explosion sound player
-	var explosion_sound_player = AudioStreamPlayer2D.new()
+	var explosion_sound_player = AudioStreamPlayer.new()
 	explosion_sound_player.stream = ExplosionSound
-	explosion_sound_player.global_position = global_position
+	explosion_sound_player.volume_db = -20
 	get_tree().root.add_child(explosion_sound_player)
 	explosion_sound_player.play()
 	
