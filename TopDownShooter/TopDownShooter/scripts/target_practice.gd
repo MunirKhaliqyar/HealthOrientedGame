@@ -17,9 +17,15 @@ func _process(delta):
 	if Globals.health <= 0:
 		end_game()
 		
+	if Globals.playerLevel >= 10:
+		win_game()
+		
 func end_game():
 	print("Game over")
 	get_tree().change_scene_to_file("res://TopDownShooter/TopDownShooter/Scenes/endMenu.tscn")
+
+func win_game():
+	get_tree().change_scene_to_file("res://TopDownShooter/TopDownShooter/Scenes/WinMenu.tscn")
 
 func _on_target_6_spawn_new_target():
 	var new_target = target_scene.instantiate() as Area2D
