@@ -19,5 +19,7 @@ position = Vector2(-4.25626, 79.1061)
 scale = Vector2(3.86728, 4.37688)
 polygon = PackedVector2Array(88.9412, -146.353, -90.3529, -150.118, -85.1765, 139.765, 107.765, 162.353)
 
+[node name="SoundEffectTimer" type="Timer" parent="."]
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

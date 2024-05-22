@@ -82,6 +82,7 @@ shape = SubResource("RectangleShape2D_3c0wy")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_re2hv")
+volume_db = -20.0
 autoplay = true
 
 [connection signal="grenade_shot_from_player" from="Scout" to="." method="_on_scout_grenade_shot_from_player"]

@@ -7,7 +7,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrqcb"]
 bg_color = Color(0, 0, 0, 1)
 
-[node name="MainMenu" type="CanvasLayer"]
+[node name="option_menu" type="CanvasLayer"]
 script = ExtResource("1_j3vp4")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
@@ -65,7 +65,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 layout_mode = 2
 theme_override_constants/margin_left = 0
 
-[node name="quitButton" type="Button" parent="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer3"]
+[node name="backButton" type="Button" parent="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer3"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -76,6 +76,7 @@ text = "Back to main menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_um17s")
+volume_db = -20.0
 autoplay = true
 
 [node name="slider" type="HSlider" parent="."]
@@ -89,5 +90,5 @@ size_flags_stretch_ratio = 10.89
 min_value = -30.0
 max_value = 0.0
 
-[connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer3/quitButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer3/backButton" to="." method="_on_main_menu_button_pressed"]
 [connection signal="value_changed" from="slider" to="." method="_on_slider_value_changed"]
