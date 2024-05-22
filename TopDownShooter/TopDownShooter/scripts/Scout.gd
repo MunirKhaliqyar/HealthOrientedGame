@@ -15,6 +15,7 @@ signal grenade_shot_from_player
 @onready var animated_sprite: AnimatedSprite2D = $CollisionPolygon2D/PlayerAnimatedSprite2D
 @onready var dust_trail: Node2D = $DustTrail
 @onready var particles: CPUParticles2D = null
+@onready var gunShot = $gunshot
 
 # Adjust animation speeds
 @export var default_animation_speed: float = 1.5
@@ -60,6 +61,7 @@ func _process(_delta):
 		if Globals.ammoCount < max_ammo:
 			shoot_frame_index = 0
 			animated_sprite.play("Shoot")
+			gunShot.play()
 			animated_sprite.speed_scale = 0  # Stop the automatic animation playback
 		
 			# Shoot

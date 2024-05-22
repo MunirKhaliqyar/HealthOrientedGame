@@ -1,4 +1,4 @@
-[gd_scene load_steps=177 format=3 uid="uid://d0pa5lx5wffx3"]
+[gd_scene load_steps=178 format=3 uid="uid://d0pa5lx5wffx3"]
 
 [ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/Scout.gd" id="1_5ep8c"]
 [ext_resource type="Texture2D" uid="uid://dqjcuyhnc7y25" path="res://TopDownShooter/TopDownShooter/Scenes/Armature_newAnimation_01.png" id="2_4nsyn"]
@@ -175,6 +175,7 @@
 [ext_resource type="Texture2D" uid="uid://4y32oioedqoa" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_119.png" id="173_hinup"]
 [ext_resource type="Texture2D" uid="uid://du2myelwwtlo4" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_120.png" id="174_sd8lk"]
 [ext_resource type="PackedScene" uid="uid://c6nrp3ifljyu8" path="res://TopDownShooter/TopDownShooter/Scenes/dust_trail.tscn" id="175_4aa1e"]
+[ext_resource type="AudioStream" uid="uid://cif8vf7biu2rm" path="res://TopDownShooter/TopDownShooter/audio/laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883.mp3" id="176_dhipi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ndvpf"]
 animations = [{
@@ -754,6 +755,11 @@ one_shot = true
 [node name="DustTrail" parent="." instance=ExtResource("175_4aa1e")]
 position = Vector2(-182, 60)
 scale = Vector2(1e-05, 1e-05)
+
+[node name="gunshot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("176_dhipi")
+volume_db = -5.0
+pitch_scale = 1.5
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="AmmoSwapTimer" to="." method="_on_timer_2_timeout"]

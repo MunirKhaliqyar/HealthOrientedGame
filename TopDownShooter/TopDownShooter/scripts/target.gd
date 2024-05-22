@@ -12,6 +12,11 @@ var sprites = [
 ]
 # Assuming you have a Timer node as a child of your node
 @export var xpOnKill = 10
+# Load the explosion scene
+@onready var ExplosionScene = preload("res://TopDownShooter/TopDownShooter/Scenes/explosion.tscn")
+# Load explosion sound
+@onready var ExplosionSound = preload("res://TopDownShooter/TopDownShooter/audio/explosion-6055.mp3")
+
 var bounce_strength = 200 
 var direction = Vector2() 
 var velocity = Vector2()
@@ -38,7 +43,7 @@ func _process(_delta):
 func _on_area_entered(area):
 	if area.collision_layer == 4:
 		area.queue_free() #destroying laser
-		queue_free()#destroying target
+		die()
 		Globals.target_destroyed += 1
 		Globals.playerXp += xpOnKill
 		if Globals.playerXp >= Globals.xpForNextLevel:
@@ -69,3 +74,35 @@ func _on_body_entered(body):
 		var tween = get_tree().create_tween().bind_node(self)
 		tween.tween_property(self, "global_position", global_position + bounce_direction * bounce_distance, bounce_duration)
 		
+func die():
+	#Instantiate the explosion
+	var explosion = ExplosionScene.instantiate()
+	#Set the explosion position to the enemy's position
+	explosion.global_position = global_position
+	#Add the explosion to the scene
+	get_tree().root.add_child(explosion)
+	#Emit the particles
+	explosion.emitting = true
+	
+	#Create and configure the explosion sound player
+	var explosion_sound_player = AudioStreamPlayer2D.new()
+	explosion_sound_player.stream = ExplosionSound
+	explosion_sound_player.global_position = global_position
+	get_tree().root.add_child(explosion_sound_player)
+	explosion_sound_player.play()
+	
+	# Schedule to stop the sound after a short duration (e.g., 0.5 seconds)
+	var timer = Timer.new()
+	timer.one_shot = true
+	timer.wait_time = 1.5
+	timer.connect("timeout", Callable(self, "_on_timer_timeout"))
+	add_child(timer)
+	timer.start()
+	add_child(timer)
+	
+	# Pass the explosion_sound_player to the timer timeout function
+	explosion_sound_player.set_meta("to_be_stopped", true)
+	timer.set_meta("sound_player", explosion_sound_player)
+	
+	#Remove the enemy
+	queue_free()
