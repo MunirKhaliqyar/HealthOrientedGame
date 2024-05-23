@@ -1,0 +1,114 @@
+[gd_scene load_steps=6 format=3 uid="uid://h6wq20umtii7"]
+
+[ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/Scenes/main_menu.gd" id="1_u5w53"]
+[ext_resource type="AudioStream" uid="uid://d22f5xbkd5ds8" path="res://TopDownShooter/TopDownShooter/items/risk-136788.mp3" id="3_8sa6r"]
+
+[sub_resource type="Gradient" id="Gradient_p4c1b"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y214a"]
+gradient = SubResource("Gradient_p4c1b")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrqcb"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="option_menu" type="CanvasLayer"]
+script = ExtResource("1_u5w53")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_y214a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Storyline"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "The year is 2069, Champlain College isn't a wasteland, but a vibrant campus known for its dedication to healthy living. You are the reigning \"Wellness Warrior,\" a student sculpted by years of hard work and healthy choices. But after the third nuclear war has finished a radioactive fog rolls in one night, warping the cafeteria's offerings into monstrous parodies of their former selves. Pizza mutates into lumbering Pepperoni Patties, greasy fries transform into Fry-Guys, and cigarette packs become Smokestacks spewing noxious fumes. The once-healthy food has become a monstrous enemy, determined to sap your strength and fill you with junk!
+ 
+As the Wellness Warrior, you're the only one seemingly unaffected by the fog's influence. It's up to you to battle these \"Temptation Beasts\" and cleanse the campus. Defeating these beasts will grants you a surge of health, but with every victory, the fog strengthens, unleashing tougher, more grotesque creatures.
+  
+With the source vanquished, the radioactive fog lifts, and the campus returns to normal. The defeated Temptation Beasts revert to harmless food, and the grateful students hail you as the ultimate Wellness Warrior. But a lingering unease reminds you: the battle for a healthy lifestyle is a constant one, and new temptations may lurk just around the corner.
+"
+fit_content = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer2/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 0
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer2/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 0
+
+[node name="Label3" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Tutorial"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Move the character using W,A,S and D or the arrow keys. Aim with the mouse and shoot the enemies by clicking the mouse button. "
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer2/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 0
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer2/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 0
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer2/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+
+[node name="backButton" type="Button" parent="MarginContainer2/VBoxContainer/VBoxContainer2/MarginContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 10.89
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_mrqcb")
+text = "Back to main menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_8sa6r")
+volume_db = -20.0
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer2/MarginContainer3/backButton" to="." method="_on_main_menu_button_pressed"]

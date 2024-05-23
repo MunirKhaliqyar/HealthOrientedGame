@@ -81,7 +81,7 @@ size_flags_vertical = 4
 size_flags_stretch_ratio = 10.89
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_nlwt8")
-text = "Introduction/Tutorial
+text = "Storyline/Tutorial
 "
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer2/VBoxContainer/VBoxContainer"]
@@ -117,6 +117,6 @@ volume_db = -20.0
 autoplay = true
 
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer4/tutorialButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer4/tutorialButton" to="." method="_on_tutorial_button_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer2/optionButton" to="." method="_on_option_button_pressed"]
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer3/quitButton" to="." method="_on_quit_button_pressed"]

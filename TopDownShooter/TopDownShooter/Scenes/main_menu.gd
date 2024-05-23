@@ -24,3 +24,7 @@ func _on_slider_value_changed(value):
 	else:
 		AudioServer.set_bus_mute(master_bus, false)
 
+
+
+func _on_tutorial_button_pressed():
+	get_tree().change_scene_to_file("res://TopDownShooter/TopDownShooter/Scenes/tutorial.tscn")# Replace with function body.
