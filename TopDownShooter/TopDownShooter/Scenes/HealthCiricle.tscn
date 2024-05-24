@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq2l0vyye7vmf"]
+
+[ext_resource type="Script" path="res://TopDownShooter/TopDownShooter/scripts/HealthCiricle.gd" id="1_1mlo5"]
+[ext_resource type="Texture2D" uid="uid://6acihxed04eg" path="res://TopDownShooter/TopDownShooter/Sprites/health-green 32px.png" id="1_n6ew7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbj74"]
+
+[node name="HealthBar" type="Node2D"]
+script = ExtResource("1_1mlo5")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(7, 7)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_n6ew7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_xbj74")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

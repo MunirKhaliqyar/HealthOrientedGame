@@ -20,7 +20,7 @@ var sprites = [
 var bounce_strength = 200 
 var direction = Vector2() 
 var velocity = Vector2()
-var speed = 200  # Change this to the desired speed
+var speed = 400  # Change this to the desired speed
 #var tween 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -67,7 +67,7 @@ func _on_area_entered(area):
 
 func _on_body_entered(body):
 	if body.collision_layer == 1:
-		Globals.health -= 10
+		Globals.health -= 30
 		var bounce_direction = -velocity.normalized()
 		var bounce_distance = bounce_strength
 		var bounce_duration = 0.2  # Adjust as necessary
@@ -75,6 +75,13 @@ func _on_body_entered(body):
 		tween.tween_property(self, "global_position", global_position + bounce_direction * bounce_distance, bounce_duration)
 		
 func die():
+	if randf() < 0.10:
+		# Instantiate the health circle scene
+		var health_circle = preload("res://TopDownShooter/TopDownShooter/Scenes/HealthCiricle.tscn").instantiate()
+		# Set the position of the health circle to the position of the target
+		health_circle.global_position = global_position
+		# Add the health circle to the scene
+		get_tree().root.add_child(health_circle)
 	#Instantiate the explosion
 	var explosion = ExplosionScene.instantiate()
 	#Set the explosion position to the enemy's position

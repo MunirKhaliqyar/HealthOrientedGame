@@ -174,7 +174,7 @@
 [ext_resource type="Texture2D" uid="uid://do0dh608ib3vi" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_118.png" id="172_chlcm"]
 [ext_resource type="Texture2D" uid="uid://4y32oioedqoa" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_119.png" id="173_hinup"]
 [ext_resource type="Texture2D" uid="uid://du2myelwwtlo4" path="res://TopDownShooter/TopDownShooter/PlayerAnimations/enemyRanged/shoot/Armature_shoot_120.png" id="174_sd8lk"]
-[ext_resource type="PackedScene" uid="uid://c6nrp3ifljyu8" path="res://TopDownShooter/TopDownShooter/Scenes/dust_trail.tscn" id="175_4aa1e"]
+[ext_resource type="PackedScene" path="res://TopDownShooter/TopDownShooter/Scenes/dust_trail.tscn" id="175_4aa1e"]
 [ext_resource type="AudioStream" uid="uid://cif8vf7biu2rm" path="res://TopDownShooter/TopDownShooter/audio/laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883.mp3" id="176_dhipi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ndvpf"]
